@@ -14,8 +14,8 @@ def partition(data, low, high):
     while i<j:
         while i+1 <= high and data[i] <= pivot:
             i+=1
-        while j+1 >= low and data[j] > pivot:
-            j+=1
+        while j-1 >= low and data[j] > pivot:
+            j-=1
         if i<j:
             data[i],data[j] = data[j],data[i]
     data[low],data[j] = data[j],data[low]
